@@ -5,6 +5,7 @@ Usage:
 ```
 ./growatt_simulate_sdm630.py SERIALPORT TOTAL_SYSTEM_POWER_IN_WATT
 ```
+Successfully tested with FTDI FT232 based USB-to-RS485 interface.
 
 ## Bug in MIC 600TL-X firmware: Export limitation stopps on higher (>~2kW) meter values
 
@@ -16,7 +17,7 @@ Other users also report this problem:
 https://www.photovoltaikforum.com/thread/168815-growatt-1500tlx-durch-smartmeter-steuern/?postID=2702847#post2702847
 
 ### These steps show the problem:
-1. Turn on export limit with 100% on MIC 600TL-X (menu -> advanced setting)
+1. Turn on export limit with 40% on MIC 600TL-X (menu -> advanced setting)
 2. Wire RS485 (signals A and B, 120 Ohm termination an both ends) and connect RS485 interface to computer
 3. Simulate power export of 300W: `./growatt_simulate_sdm630.py /dev/ttyUSB0 300`
 => OK: regulation works
